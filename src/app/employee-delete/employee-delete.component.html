@@ -1,0 +1,24 @@
+<h3>Confirm delete employee</h3>>
+
+<h4 *ngIf="!canDelete">Record might have already deleted</h4>
+
+<form (submit)="deleteEmployee()" *ngIf="canDelete">
+  <div>
+    <label>Employee name:</label>
+    <label>{{emp.name}}</label>
+  </div>
+
+  <div>
+    <label>salary:</label>
+    <label>{{emp.salary}}</label>
+  </div>
+
+  <div>
+    <label>Date of Joining:</label>
+    <label>{{emp.dateOfJoining}}</label>
+  </div>
+
+  <div>
+    <button type="submit">Confirm Delete</button>
+  </div>
+</form>

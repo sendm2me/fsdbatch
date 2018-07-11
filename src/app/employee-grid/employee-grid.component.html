@@ -1,0 +1,19 @@
+<a href="add">New Employee</a>
+
+<table>
+<tr>
+  <th>Emp#</th>  
+  <th>Name#</th>  
+  <th>Salary#</th>  
+  <th>Doj#</th>    
+</tr>  
+<tr *ngFor="let emp of emps">
+  <td>{{emp.empId}}</td>
+  <td>{{emp.name}}</td>
+  <td>{{emp.salary}}</td>
+  <td>{{emp.dateOfJoining}}</td>
+  <td><a href="edit/{{emp.empId}}">Edit Employee</a></td>
+  <td><a href="del/{{emp.empId}}">Delete Employee</a></td>
+
+</tr>
+</table>

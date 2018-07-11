@@ -1,0 +1,44 @@
+<p>
+  employee-form works!
+</p>
+<p>
+  add-employee-component works!
+</p>
+
+<section>
+<div class="row">
+  <div class="col-sm-8">
+    <form class="form-horizontal" (submit)="saveEmployee()">
+      <div class="form-group">
+     
+        <label class="control-label col-sm4">Name:</label>
+        <div class="col-sm-4">
+            <input class="form-control" type="text" name="name" [(ngModel)]="emp.name" required/>
+        </div>
+
+        <label class="control-label col-sm4">Salary:</label>
+        <div class="col-sm-4">
+            <input class="form-control" type="decimal" name="sal" [(ngModel)]="emp.salary" required min="10000" max="25000"/>
+        </div>
+
+
+        <label class="control-label col-sm4">DOJ:</label>
+        <div class="col-sm-4">
+            <input class="form-control" type="date" name="doj" [(ngModel)]="dojStr" (change)="updateDoj()"/>
+        </div>
+
+<div>
+  <button type="submit">save</button>  
+</div>
+
+      </div>
+    </form>
+  </div>
+</div> 
+
+<!--  <div class="pull-right">
+    <button class="btn btn-primary" (click)="saveEmployee()">save</button>
+    <button class="btn btn-danger" (click)="cancel()">cancel</button>
+  </div>
+-->
+</section>
